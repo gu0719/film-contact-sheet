@@ -1,0 +1,19 @@
+[project]
+name = "film-contact-sheet"
+version = "0.1.0"
+requires-python = ">=3.11"
+dependencies = [
+  "Pillow>=10.4",
+  "PySide6>=6.6",
+  "rapidocr-onnxruntime>=1.4",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.2", "pytest-qt>=4.4"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+qt_api = "pyside6"
+
+[tool.setuptools.packages.find]
+include = ["film_contact_sheet*"]
